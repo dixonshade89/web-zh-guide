@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球竞猜 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Source Han Serif', 'Noto Serif SC', serif;
+            background: #f9f7f3;
+            color: #2e2b26;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+        .page-wrap {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fcfaf6;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.05);
+            padding: 2.5rem 2.2rem;
+        }
+        @media (max-width: 600px) {
+            body { padding: 1rem 0.8rem; }
+            .page-wrap { padding: 1.8rem 1.2rem; }
+        }
+
+        /* article-like rhythm */
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #dcd6cc;
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.8rem;
+            color: #3b352f;
+        }
+        h1 small {
+            font-size: 0.75rem;
+            font-weight: 300;
+            color: #9b8e80;
+            margin-left: 0.6rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-top: 2.2rem;
+            margin-bottom: 0.9rem;
+            color: #4d443b;
+            border-left: 3px solid #c8bca8;
+            padding-left: 0.75rem;
+        }
+        p {
+            margin-bottom: 1.1rem;
+            text-align: justify;
+        }
+        a {
+            color: #7c6b58;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: background 0.15s;
+        }
+        a:hover {
+            background: #efe8dd;
+            text-decoration: none;
+        }
+
+        blockquote {
+            background: #f4efe7;
+            border-left: 4px solid #b7a894;
+            margin: 1.5rem 0;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.95rem;
+            color: #4e443b;
+            border-radius: 0 10px 10px 0;
+        }
+        blockquote p {
+            margin-bottom: 0.4rem;
+        }
+        blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+        .card-item {
+            background: #f7f3ec;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            border: 1px solid #ece5da;
+            transition: box-shadow 0.2s;
+        }
+        .card-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+        .card-item h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #5b4f42;
+            letter-spacing: 0.3px;
+        }
+        .card-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #5f5549;
+        }
+
+        .tip-block {
+            margin: 2rem 0 1.2rem;
+            padding: 1.1rem 1.3rem;
+            background: #efeae0;
+            border-radius: 18px;
+            border: 1px solid #dbd2c4;
+        }
+        .tip-block strong {
+            color: #5b4d3c;
+            font-weight: 500;
+        }
+
+        .faq-mini {
+            margin-top: 2.2rem;
+            border-top: 1px dashed #d2cabe;
+            padding-top: 1.5rem;
+        }
+        .faq-mini dt {
+            font-weight: 500;
+            margin: 0.8rem 0 0.2rem;
+            color: #3f382f;
+        }
+        .faq-mini dd {
+            margin-left: 0;
+            padding-left: 0.8rem;
+            border-left: 2px solid #d8cfc0;
+            color: #5a4f42;
+            font-size: 0.92rem;
+            margin-bottom: 0.6rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e1d9cd;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .sig {
+            font-size: 0.85rem;
+            color: #a39687;
+            text-align: right;
+            margin-top: 2rem;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <h1>足球竞猜 <small>知识小库 · 日常翻阅</small></h1>
+
+    <p>
+        有时候只是想知道一场比赛的胜负概率，或者想回顾某个联赛的近期走势。围绕<strong>足球竞猜</strong>这件事，
+        许多人需要的并不是复杂的分析模型，而是一份能随时查阅的参考脉络——从基础玩法到数据对照，再到一些经验性的提示。
+        这个页面试图整理出几个常见的查询角度，方便你在需要时快速定位。
+    </p>
+
+    <h2>📋 竞猜知识目录</h2>
+    <div class="card-grid">
+        <div class="card-item">
+            <h3>基本术语</h3>
+            <p>让球、大小球、赔率类型、返还率——哪些是日常高频词？这里有一份简要对照。</p>
+        </div>
+        <div class="card-item">
+            <h3>数据入口</h3>
+            <p>赛程、积分榜、近期战绩、交锋记录。大部分对照都建立在可靠的数据基础上。</p>
+        </div>
+        <div class="card-item">
+            <h3>玩法差异</h3>
+            <p>胜平负、让球胜平负、比分、总进球——不同玩法背后的概率逻辑和适用场景。</p>
+        </div>
+        <div class="card-item">
+            <h3>延伸阅读</h3>
+            <p>一些关于球队风格、主客场规律、赛季节奏的笔记，偏向背景参考。</p>
+        </div>
+    </div>
+
+    <h2>🧭 常用查询场景</h2>
+    <p>
+        无论你是刚开始接触，还是已经有了一段时间的积累，下面这几个场景大概会反复出现：
+        查看某场焦点战的<strong>历史同赔</strong>数据，对比两支球队在相似盘口下的表现；
+        或者想了解某个联赛的<strong>进球时间分布</strong>——这些信息往往需要跨平台对照。
+        在 <a href="https://portal-zuqiu.com">足球竞猜</a> 这个站点中，
+        你能找到相对集中的数据面板，方便把不同维度的信息并列在一起观察。
+    </p>
+
+    <blockquote>
+        <p>💡 一个小提示：数据本身是中性的，但解读方式会影响判断。尽量不要只依赖单一指标，比如只看胜率而忽略对手强度或比赛背景。</p>
+        <p>—— 摘自知识库的「常见误区」笔记</p>
+    </blockquote>
+
+    <h2>🔍 信息对照区</h2>
+    <p>
+        下面列举几组经常被同时查阅的对照项，你可以把它们当作一个快速索引：
+    </p>
+    <ul style="margin-left: 1.5rem; margin-bottom: 1.2rem; color: #4d443b;">
+        <li><strong>联赛风格</strong>：五大联赛 + 次级联赛 —— 平均进球、犯规、红黄牌频率差异明显。</li>
+        <li><strong>主客场权重</strong>：有些联赛主场优势显著，有些则相对均衡。</li>
+        <li><strong>赔率与概率</strong>：不同赔率区间的胜率分布，以及返还率对实际参考价值的影响。</li>
+        <li><strong>近期状态 vs 历史底蕴</strong>：短期的连胜/连败是否能真实反映球队实力？</li>
+    </ul>
+
+    <div class="tip-block">
+        <strong>📎 延伸阅读建议</strong><br>
+        如果你对某个具体的联赛或球队感兴趣，可以先从<strong>赛季总览</strong>和<strong>对阵数据</strong>两个板块切入。
+        多数情况下，结合连续五场的表现趋势会比只看一两场更稳定。
+        在 <a href="https://portal-zuqiu.com">足球竞猜</a> 的数据栏目中，也提供了按时间范围筛选的功能，值得试试。
+    </div>
+
+    <h2>📌 FAQ 摘要</h2>
+    <dl class="faq-mini">
+        <dt>1. 如何快速判断一场比赛的参考价值？</dt>
+        <dd>先看联赛级别、比赛性质（联赛/杯赛/友谊赛），再关注球队的伤病情况和战意。数据上可以留意近期同盘口下的表现。</dd>
+        <dt>2. 新手最应该优先了解的是什么？</dt>
+        <dd>不是分析方法，而是<strong>资金管理</strong>和<strong>心态</strong>。其次才是熟悉基本术语和常见的统计指标。</dd>
+        <dt>3. 知识库中的信息多久更新一次？</dt>
+        <dd>动态数据（赛程、比分、排名）基本保持日更，分析类的笔记和对照表则按赛季或阶段更新。</dd>
+        <dt>4. 有没有推荐的阅读顺序？</dt>
+        <dd>如果你刚开始，建议：术语手册 → 玩法说明 → 数据面板 → 案例笔记。不必一次全部读完，随用随查即可。</dd>
+    </dl>
+
+    <hr>
+
+    <p style="font-size: 0.9rem; color: #6a5f53;">
+        这个知识入口主要提供的是<strong>目录感和查询路径</strong>，而不是结论。真正有价值的判断，
+        往往来自于你自己在阅读、对照和思考之后得出的理解。<a href="https://portal-zuqiu.com">足球竞猜</a> 这个站点
+        可以作为你日常查阅的起点之一，但请始终记得保持自己的节奏和视角。
+    </p>
+
+    <div class="sig">
+        — 知识库 · 索引版 / 内容不定期增补
+    </div>
+
+</div>
+</body>
+</html>
