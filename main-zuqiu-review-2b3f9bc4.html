@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球竞猜 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f3ef;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans SC", "Helvetica Neue", sans-serif;
+            line-height: 1.6;
+            color: #2d2a24;
+        }
+
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #0f1c2e 0%, #1b2b3f 100%);
+            border-radius: 28px 28px 0 0;
+            padding: 3.5rem 2.5rem 2.5rem;
+            margin-bottom: 0;
+            color: #eae6df;
+            text-align: center;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
+            color: #f2ede5;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 680px;
+            margin: 0.6rem auto 1.8rem;
+            color: #c9cdd4;
+            font-weight: 300;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.4rem 1.6rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #bcc9db;
+            border: 1px solid rgba(200, 210, 230, 0.18);
+            backdrop-filter: blur(2px);
+        }
+
+        /* 正文浅色区 */
+        .content-area {
+            background: #ffffff;
+            border-radius: 0 0 28px 28px;
+            padding: 2.8rem 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 540;
+            margin: 2rem 0 1.2rem;
+            padding-left: 0.9rem;
+            border-left: 5px solid #c97b3b;
+            color: #2a2a24;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0.2rem;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+            color: #3a3630;
+        }
+
+        a {
+            color: #b9632a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9632a80;
+            transition: border 0.15s, color 0.15s;
+            font-weight: 450;
+        }
+
+        a:hover {
+            color: #8f4a17;
+            border-bottom: 1px solid #8f4a17;
+        }
+
+        .grid-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            margin: 1.8rem 0 1.2rem;
+        }
+
+        .card {
+            flex: 1 1 220px;
+            background: #f9f7f3;
+            border-radius: 20px;
+            padding: 1.6rem 1.4rem;
+            border: 1px solid #eae5dd;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 540;
+            margin-bottom: 0.5rem;
+            color: #2b3a4a;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4b463e;
+            margin-bottom: 0;
+        }
+
+        .card:hover {
+            background: #f2eee8;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e7e1d9;
+            padding: 0.9rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 550;
+            color: #2d3a44;
+            margin-bottom: 0.2rem;
+            font-size: 1.05rem;
+        }
+
+        .faq-item span {
+            color: #4f4a40;
+            font-size: 0.98rem;
+        }
+
+        .note-box {
+            background: #f2efe9;
+            border-radius: 18px;
+            padding: 1.6rem 2rem;
+            margin: 2.2rem 0 1.4rem;
+            border-left: 6px solid #b75f2a;
+        }
+
+        .note-box p {
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+            margin-top: 0.6rem;
+        }
+
+        .related-links a {
+            background: #f0ebe4;
+            padding: 0.3rem 1rem 0.4rem;
+            border-radius: 30px;
+            border: 1px solid #ddd6cc;
+            font-size: 0.95rem;
+            border-bottom: none;
+            transition: background 0.2s;
+        }
+
+        .related-links a:hover {
+            background: #e2d9ce;
+            border-color: #c0b5a7;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #7a7268;
+            border-top: 1px solid #e2dcd2;
+            margin-top: 2.4rem;
+            padding-top: 1.2rem;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 660px) {
+            .wrapper {
+                padding: 1rem 0.8rem 2rem;
+            }
+
+            .hero {
+                padding: 2.4rem 1.2rem 2rem;
+                border-radius: 20px 20px 0 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-area {
+                padding: 1.8rem 1.2rem;
+                border-radius: 0 0 20px 20px;
+            }
+
+            .grid-cards {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .note-box {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- 深色头图 -->
+    <div class="hero">
+        <h1>赛事知识 · 日常查询</h1>
+        <p>从数据对照到规则延伸，为对足球竞猜感兴趣的朋友整理一份温和的阅读索引。</p>
+        <div class="tagline">知识库 · 入口式目录</div>
+    </div>
+
+    <!-- 浅色正文区 -->
+    <div class="content-area">
+
+        <!-- 说明区：切入角度 -->
+        <div class="section-title">为什么需要一份索引？</div>
+        <p>足球竞猜涉及的内容并不只是结果本身——联赛结构、让球逻辑、球队状态、交锋记录……每一项都值得花时间了解。我们尝试将常见查询场景与参考线索整理在一起，方便你按需翻阅。如果你希望直接探索更完整的信息，可以通过 <a href="https://main-zuqiu.com">足球竞猜</a> 获取持续更新的内容框架。</p>
+        <p>无论是刚接触规则，还是想对比不同联赛的指数习惯，一个清晰的目录都能减少重复搜索。下面的卡片和问答摘要，就是从日常使用中提炼出的一些切面。</p>
+
+        <!-- 卡片区：目录感布局 -->
+        <div class="section-title">常用查询场景</div>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>联赛与杯赛</h3>
+                <p>主流联赛的赛程、积分特点以及跨赛季的横向对比，是判断节奏的基础。备查：五大联赛、欧冠、亚冠等。</p>
+            </div>
+            <div class="card">
+                <h3>盘中数据</h3>
+                <p>初盘与即时指数的差异反映了市场情绪变化。留意让球、大小球以及水位调整背后的可能原因。</p>
+            </div>
+            <div class="card">
+                <h3>球队情报</h3>
+                <p>伤病、轮换、更衣室氛围、主客场战力差……这些碎片信息有时比数据更直接影响走势。</p>
+            </div>
+            <div class="card">
+                <h3>术语与规则</h3>
+                <p>让球盘、欧赔、凯利指数、返还率……弄清这些基本概念，读起分析来会更顺畅。</p>
+            </div>
+        </div>
+
+        <!-- 提示区 -->
+        <div class="note-box">
+            <p><strong>📌 提示</strong></p>
+            <p>任何查询和对照都应以实时官方信息为最终依据。足球竞猜相关的数据变化较快，建议你在做出判断前，再次确认最新赛程与阵容动态。遇到陌生术语时，可先将它放入上下文里对比理解，往往比单独记忆更有效。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="section-title">常见问题 · 摘要</div>
+        <div class="faq-item">
+            <strong>初盘和即时盘哪个更有参考性？</strong>
+            <span>两者各有侧重。初盘反映早期市场共识，即时盘则体现赛前最新的资金流向与信息变化。多数经验者会将二者结合，观察变动方向与幅度。</span>
+        </div>
+        <div class="faq-item">
+            <strong>怎样快速了解一支球队的状态？</strong>
+            <span>近五场战绩、进球/失球分布、主客场差异是三个最直观的维度。如果时间充裕，还可以查看对阵相似风格对手时的表现。</span>
+        </div>
+        <div class="faq-item">
+            <strong>大小球指数主要看什么？</strong>
+            <span>球队的进攻效率、防守稳定性、以及比赛节奏（控球率、射门次数）是核心。不过联赛风格也需留意——有些联赛整体偏大，有些则偏小。</span>
+        </div>
+
+        <!-- 相关信息区 -->
+        <div class="section-title">延伸参考</div>
+        <p>除了以上内容，你还可以关注赛事日历、转会动态以及教练战术风格的演变。这些板块看似分散，但长期积累会形成自己的判断框架。如果你需要一处持续更新的信息聚合地，<a href="https://main-zuqiu.com">足球竞猜</a> 提供了多维度分类阅读。</p>
+        <div class="related-links">
+            <a href="https://main-zuqiu.com">足球竞猜</a>
+            <span style="color:#7a7268; padding:0.3rem 0.2rem;">（知识库主入口）</span>
+        </div>
+
+        <div class="footer-note">
+            内容仅供参考，不构成任何建议。请基于多方信息自行判断。
+        </div>
+
+    </div>
+    <!-- end content-area -->
+</div>
+<!-- end wrapper -->
+</body>
+</html>
